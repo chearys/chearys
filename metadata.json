@@ -1,0 +1,14 @@
+{
+  "name": "chearys",
+  "creator": "chearys",
+  "description": "Stuff!",
+  "version": "1.1.1",
+  "entry": "index.js",
+  "requires": [
+    "Vigilance",
+    "BloomCore",
+    "RenderLib",
+    "requestV2",
+    "PogData"
+  ]
+}

@@ -1,0 +1,3 @@
+# Ignore the config.toml files
+features/kuudra/config.toml
+config.toml
