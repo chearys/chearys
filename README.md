@@ -25,22 +25,11 @@ If you have any questions or encounter any problems, feel free to contact **@che
 
 ## Installation
 
-To install **Chearys**, follow these steps:
-
-1. Install the mod off Github from [Github Website]
-(https://github.com/chearys/chearys)
-2. Open the modules folder in-game by running `/ct modules`, or navigate to `.minecraft/config/ChatTriggers/modules`.
-3. Place the **unzipped** `chearys` folder inside the `modules` folder.
-4. Run `/ct load` in-game to load the module.
-
-**OR**
-
 1. Install the ChatTriggers mod from [ChatTriggers Website](https://www.chattriggers.com).
 2. Open the modules folder in-game by running `/ct modules`, or navigate to `.minecraft/config/ChatTriggers/modules`.
 3. Place the **unzipped** `chearys` folder inside the `modules` folder.
 4. Run `/ct load` in-game to load the module.
 Please note the chattrigger version has alot less features.
-
 
 ## Usage
 
