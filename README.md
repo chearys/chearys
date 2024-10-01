@@ -14,7 +14,7 @@ If you have any questions or encounter any problems, feel free to contact **@che
   ![Rend Calculator](https://i.imgur.com/b3AJdhr.png)
 
 - **Custom Kuudra Splits**:  
-  Fully customizable Kuudra splits based on your preferences.  
+  Fully customizable Kuudra splits that accounts for server lag.  
   - **During the run**:  
     ![Custom Kuudra Splits (During Run)](https://i.imgur.com/7XehIkn.png)
   - **After the run (detailed splits)**:  
