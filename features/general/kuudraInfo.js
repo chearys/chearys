@@ -61,6 +61,7 @@ function trigger(c) {
     ChatLib.chat(`&4[chearys] &8[${c.level}&8] ${c.rank} ${c.ign}'s &cKuudra stats:`);
     ChatLib.chat("");  
     ChatLib.chat(kuudraLevelMessage);
+    ChatLib.chat(`&cNether Stars: ${c.kuudraStats.stars}`);
     ChatLib.chat(statsMessage);
     ChatLib.chat(MPMessage);
     ChatLib.chat(`&cMagical Power&f: ${c.kuudraStats.MP}`);
