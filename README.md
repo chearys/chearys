@@ -38,6 +38,7 @@ Please note the chattrigger version has alot less features.
 
 ## Special Thanks
 
+Special thanks to Sophie for testing and providing feedback!
 A special thanks to [NwjnAddons](https://github.com/nwjn/NwjnAddons) for providing some of the base code.
 
 ## License
