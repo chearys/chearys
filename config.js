@@ -279,6 +279,20 @@ VA_list = "";
     * Renders
     */
 @SwitchProperty({
+  name: "Kuudra HP Bossbar",
+  description: "Displays HP percentage from 0 to 100 percent",
+  category: "Kuudra",
+  subcategory: "Renders"
+})
+enableKuudraHPPercent = false;
+@SwitchProperty({
+  name: "Kuudra HP",
+  description: "Displays Kuudra's HP",
+  category: "Kuudra",
+  subcategory: "Renders"
+})
+enableKuudraHP = false;
+@SwitchProperty({
   name: "Supply Drop beacon",
   description: "Draw beacon on piles where supplies are needed",
   category: "Kuudra",
