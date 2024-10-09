@@ -4,6 +4,7 @@ import { getPhase } from "./splits";
 import { registerWhen } from "../../utils/functions/reg";
 import Skyblock from "../../../BloomCore/Skyblock";
 import { sleep } from "../../utils/functions/cooldown";
+import { sendmsg } from "../../utils/functions/msg";
 import { sendDebugmsg } from "../../utils/functions/debug";
 
 const EntityArmorStand = Java.type("net.minecraft.entity.item.EntityArmorStand");

@@ -7,7 +7,7 @@ import { getPhase } from './splits';
 const EntityMagmaCube = Java.type('net.minecraft.entity.monster.EntityMagmaCube');
 let cubes = World.getAllEntitiesOfType(EntityMagmaCube.class);
 let HPDisplay = ["100,000/100,0000 ❤", 0, 0, 0];
-let percentHP = new Text(`Unable to find Kuudra`, Renderer.screen.getWidth() / 2 - Renderer.getStringWidth(`One Cycleable`) / 2, 10);
+let percentHP = new Text(`Unable to find Kuudra`, Renderer.screen.getWidth() / 2 - 69 / 2, 10);
 let currentHP = 0;
 
 export function getKuudraHP() { return currentHP };
@@ -78,6 +78,6 @@ registerWhen(register('renderWorld', () => {
 }), () => Skyblock.subArea === "Kuudra's Hollow" && Settings.enableKuudraHP);
 
 register('worldUnload', () => {
-    percentHP = new Text(`Unable to find Kuudra`, Renderer.screen.getWidth() / 2 - Renderer.getStringWidth(`One Cycleable`) / 2, 10);
+    percentHP = new Text(`Unable to find Kuudra`, Renderer.screen.getWidth() / 2 - 69 / 2, 10);
     HPDisplay = ["100k/100k ❤", 0, 0, 0];
 });
