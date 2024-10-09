@@ -24,7 +24,8 @@ registerWhen(register("tick", () => {
             let color;
 
             if (phase >= 1 && phase <= 6) {
-                const percent = `${Math.max(0, currentHP - 25_000 / 75_000 * 100).toFixed(2)}%`; 
+                const percent = `${Math.max(0, ((currentHP - 25_000) / 75_000 * 100)).toFixed(2)}%`;
+
 
                 color = currentHP > 99_000 ? "§a" :
                     currentHP > 75_000 ? "§2" :
