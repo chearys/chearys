@@ -366,7 +366,7 @@ backBone = false;
 //Kuudra/Others
 @SwitchProperty({
   name: "Pull tracker",
-  description: "Calculates your party's rend damage",
+  description: "Calculates your party's rend damage &cRequires Custom Kuudra Splits",
   category: 'Kuudra',
   subcategory: 'Others',
 })
