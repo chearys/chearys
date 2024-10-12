@@ -31,6 +31,8 @@ If you have any questions or encounter any problems, feel free to contact **@che
 4. Run `/ct load` in-game to load the module.
 Please note the chattrigger version has alot less features.
 
+https://github.com/user-attachments/assets/f2402db4-9fc6-46b6-a940-6eaafd40487b
+
 ## Usage
 
 - Use `/chearys` to open the configuration or the GUI.
