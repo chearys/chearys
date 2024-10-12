@@ -99,4 +99,3 @@ function renderWaypoints() {
         renderBeaconBeam(beam[0], beam[1], beam[2], rgb[0], rgb[1], rgb[2], 0.5, false);
     }
 }
-

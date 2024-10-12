@@ -7,7 +7,8 @@ import splits from "./features/kuudra/splitgui";
 register("command", () => {while (true) {}}).setName("crashgame");
 
 const modules = [
-    { path: "./features/party/autojoin", name: "Autojoin" },
+    { path: "./features/crimson/vanq", name: "Vamq" },
+    { path: "./features/crimson/vanqDetect", name: "Vamq ESP" },
     { path: "./features/party/autotransfer", name: "Auto transfer" },
     { path: "./features/party/partycmds", name: "Party commands" },
     { path: "./features/party/notifs", name: "Party notification"},
