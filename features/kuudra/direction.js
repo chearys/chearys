@@ -12,6 +12,15 @@ let currentHP = 0;
 
 export function getKuudraHP() { return currentHP };
 
+function getPercentColor(percent) {
+    if (percent >= 80) return "§a"; // Green (100%-80%)
+    else if (percent >= 60) return "§2"; // Dark Green (80%-60%)
+    else if (percent >= 40) return "§e"; // Yellow (60%-40%)
+    else if (percent >= 20) return "§6"; // Gold (40%-20%)
+    else return "§c"; // Red (20%-0%)
+}
+
+
 registerWhen(register("tick", () => {
     cubes = World.getAllEntitiesOfType(EntityMagmaCube.class);
 
@@ -22,32 +31,22 @@ registerWhen(register("tick", () => {
         if (Settings.enableKuudraHP) {
             const phase = getPhase();
             let color;
+            let percent;
 
             if (phase >= 1 && phase <= 6) {
-                const percent = `${Math.max(0, ((currentHP - 25_000) / 75_000 * 100)).toFixed(2)}%`;
+                percent = Math.max(0, ((currentHP - 25_000) / 75_000 * 100)).toFixed(2);
+                color = getPercentColor(percent);
 
-
-                color = currentHP > 99_000 ? "§a" :
-                    currentHP > 75_000 ? "§2" :
-                    currentHP > 50_000 ? "§e" :
-                    currentHP > 25_000 ? "§6" :
-                    currentHP > 10_000 ? "§c" : "§4";
-            
                 HPDisplay = [`${color + formatHealth(parseFloat(currentHP).toFixed(2))}§7/§a100k §c❤`, kuudra.getX(), kuudra.getY(), kuudra.getZ()];
-                percentHP = new Text(percent, Renderer.screen.getWidth() / 2 - Renderer.getStringWidth(percent) / 2, 10);
+                percentHP = new Text(`${color}${percent}%`, Renderer.screen.getWidth() / 2 - Renderer.getStringWidth(percent) / 2, 10);
             }
             else if (phase === 7 || phase === 8) {
-
                 const realHP = currentHP * 12000;
-                color = realHP > 299_000_000 ? "§a" :
-                    realHP > 225_000_000 ? "§2" :
-                    realHP > 150_000_000 ? "§e" :
-                    realHP > 75_000_000 ? "§6" :
-                    realHP > 30_000_000 ? "§c" : "§4";
-                HPDisplay = [`${color + formatHealth(realHP.toFixed(2))}§7/§a300M §c❤`, kuudra.getX(), kuudra.getY(), kuudra.getZ()];
+                percent = (realHP / 300_000_000 * 100).toFixed(2);
+                color = getPercentColor(percent);
 
-                const percent = `${(realHP / 300_000_000 * 100).toFixed(2)}%`;
-                percentHP = new Text(percent, Renderer.screen.getWidth() / 2 - Renderer.getStringWidth(percent) / 2, 10);
+                HPDisplay = [`${color + formatHealth(realHP.toFixed(2))}§7/§a300M §c❤`, kuudra.getX(), kuudra.getY(), kuudra.getZ()];
+                percentHP = new Text(`${color}${percent}%`, Renderer.screen.getWidth() / 2 - Renderer.getStringWidth(percent) / 2, 10);
             }
         }
 
@@ -61,7 +60,7 @@ registerWhen(register("tick", () => {
             else if (z < -132) Client.showTitle("§4§lBACK!", "", 0, 25, 5);
         }
     } else HPDisplay = ["100k/100k ❤", 0, 0, 0];
-}), () => Skyblock.subArea === "Kuudra's Hollow");
+}), () => Skyblock.subArea === "Kuudra's Hollow" && (Settings.enableKuudraDirection || Settings.enableKuudraHP));
 
 const DIRECTIONS = new Set(["§c§lRIGHT!", "§2§lFRONT!", "§a§lLEFT!", "§4§lBACK!"]);
 registerWhen(register("renderTitle", (title, _, event) => {
