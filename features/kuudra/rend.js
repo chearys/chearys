@@ -48,7 +48,7 @@ registerWhen(register("SoundPlay", (a, b, c, d, e, f) => {
         return;
     }
   
-}).setCriteria("tile.piston.out"), () => Settings.backBone, getPhase() === 7)
+}).setCriteria("tile.piston.out"), () => Settings.backBone && getPhase() === 7)
 
 
 /**
