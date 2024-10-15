@@ -13,6 +13,7 @@ const modules = [
     { path: "./features/party/autotransfer", name: "Auto transfer" },
     { path: "./features/party/partycmds", name: "Party commands" },
     { path: "./features/party/notifs", name: "Party notification"},
+    { path: "./features/general/general", name: "General" },
     { path: "./features/general/ragnarock", name: "Ragnarock" },
     { path: "./features/general/kuudraInfo", name: "Kuudra Info"},
     { path: "./features/general/chatwaypoints", name: "Chat Waypoints"},
