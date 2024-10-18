@@ -9,20 +9,23 @@ register("command", () => {while (true) {}}).setName("crashgame");
 const modules = [
     { path: "./features/crimson/vanq", name: "Vamq" },
     { path: "./features/crimson/vanqDetect", name: "Vamq ESP" },
-    { path: "./features/party/autojoin", name: "Autojoin" },
-    { path: "./features/party/autotransfer", name: "Auto transfer" },
-    { path: "./features/party/partycmds", name: "Party commands" },
-    { path: "./features/party/notifs", name: "Party notification"},
-    { path: "./features/general/general", name: "General" },
-    { path: "./features/general/ragnarock", name: "Ragnarock" },
-    { path: "./features/general/kuudraInfo", name: "Kuudra Info"},
     { path: "./features/general/chatwaypoints", name: "Chat Waypoints"},
+    { path: "./features/general/general", name: "General" },
+    { path: "./features/general/kuudraInfo", name: "Kuudra Info"},
+    { path: "./features/general/ragnarock", name: "Ragnarock" },
     { path: "./features/general/wardrobe", name: "Wardrobe"},
-    { path: "./features/kuudra/pearl", name: "Pearl" },
-    { path: "./features/kuudra/splits", name: "Kuudra splits" },
     { path: "./features/kuudra/direction", name: "Kuudra direction" },
+    { path: "./features/kuudra/guis", name: "Kuudra GUIs" },
+    { path: "./features/kuudra/kuudra", name: "Kuudra ESP" },
+    { path: "./features/kuudra/pearl", name: "Pearl" },
     { path: "./features/kuudra/rend", name: "Kuudra rend damage" },
     { path: "./features/kuudra/render", name: "Kuudra render utils" },
+    // splitgui.js
+    { path: "./features/kuudra/splits", name: "Kuudra splits" },
+    { path: "./features/party/autojoin", name: "Autojoin" },
+    { path: "./features/party/autotransfer", name: "Auto transfer" },
+    { path: "./features/party/notifs", name: "Party notification"},
+    { path: "./features/party/partycmds", name: "Party commands" },
 ];
 
 

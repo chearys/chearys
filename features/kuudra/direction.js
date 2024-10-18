@@ -60,7 +60,7 @@ registerWhen(register("tick", () => {
             else if (z < -132) Client.showTitle("§4§lBACK!", "", 0, 25, 5);
         }
     } else HPDisplay = ["100k/100k ❤", 0, 0, 0];
-}), () => Skyblock.subArea === "Kuudra's Hollow" && (Settings.enableKuudraDirection || Settings.enableKuudraHP));
+}), () => Skyblock.subArea === "Kuudra's Hollow");
 
 const DIRECTIONS = new Set(["§c§lRIGHT!", "§2§lFRONT!", "§a§lLEFT!", "§4§lBACK!"]);
 registerWhen(register("renderTitle", (title, _, event) => {
