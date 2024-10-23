@@ -355,22 +355,45 @@ customSupplyMessage = "";
 })
 pearlAmount = "";
 
-//Kuudra/Others
+// Rend
+
+
+//Kuudra/Rend
 @SwitchProperty({
   name: "Backbone tracker",
   description: "Plays a sound when your backbone hits",
   category: 'Kuudra',
-  subcategory: 'Others',
+  subcategory: 'Rend',
 })
 backBone = false;
-//Kuudra/Others
+//Kuudra/Rend
+@TextProperty({
+  name: "Backbone tracker Sound",
+  description: "e.g random.anvil_land you can search /playSound 1.8.9 for it",
+  category: 'Kuudra',
+  subcategory: 'Rend',
+  placeholder: '',
+})
+backBoneSound = "mob.cat.meow"
+//Kuudra/Rend
 @SwitchProperty({
   name: "Pull tracker",
-  description: "Calculates your party's rend damage &cRequires Custom Kuudra Splits",
+  description: "Calculates your party's rend damage",
   category: 'Kuudra',
-  subcategory: 'Others',
+  subcategory: 'Rend',
 })
 rendDamage = false;
+//Kuudra/Rend
+@TextProperty({
+  name: 'Backbone message',
+  description: 'Displays a message when backbone hits with botv/fel',
+  category: 'Kuudra',
+  subcategory: 'Rend',
+  placeholder: '',
+})
+pullText = '&4Pull!';
+
+
 //Kuudra/GUI
 @SwitchProperty({
   name: "Block click",

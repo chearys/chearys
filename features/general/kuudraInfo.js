@@ -4,28 +4,24 @@ import { request }from "../../../requestV2";
 import axios from "axios";
 
 register("command", (meow) => {
-   
-    if(!meow) {
-        fetchshit(Player.getName()).then(result => {
-            //console.log(JSON.stringify(result, null, 2)); 
-            if (result) {
-                trigger(result); 
-            } else {
-                sendDebugmsg("No result returned from the API.");
-            }
-        });
-        return;
-    }
+    const playerName = meow || Player.getName();
+    fetchAndTrigger(playerName);
+}).setName("kuudra");
 
-    fetchshit(meow).then(result => {
-        console.log(JSON.stringify(result, null, 2)); 
+register("chat", (player) => {
+    if (!Settings.kuudraInfo || player == Player.getName()) return;
+    fetchAndTrigger(player); 
+}).setCriteria(/^Party Finder > (.+) joined the group! \(.*\)$/);
+
+function fetchAndTrigger(playerName) {
+    fetchshit(playerName).then(result => {
         if (result) {
-            trigger(result); 
+            trigger(result);
         } else {
             sendDebugmsg("No result returned from the API.");
         }
     });
-}).setName("kuudra");
+}
 
 function trigger(c) {
   

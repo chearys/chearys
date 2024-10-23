@@ -39,8 +39,8 @@ registerWhen(register("SoundPlay", (a, b, c, d, e, f) => {
         count=2;
         if (i.includes("volcano") || i.includes("fel")) {
             sendmsg(`Back bone hit at ${formatTimeMs(getKillTime())} while holding ${Player.getHeldItem().getName()}`);
-            World.playSound("mob.cat.meow", 2, 0.5);
-            cooldown=20;
+            World.playSound(Settings.backBoneSound || "mob.cat.meow", 2, 0.5);
+            Client.showTitle(Settings.pullText || "&4Pull!", "", 0, 25, 5);
             return;
         }
 
@@ -50,26 +50,6 @@ registerWhen(register("SoundPlay", (a, b, c, d, e, f) => {
   
 }).setCriteria("tile.piston.out"), () => Settings.backBone && getPhase() === 7)
 
-
-/**
- * Render
- */
-
-let cooldown = 0
-registerWhen(register("Tick", () => {
-    cooldown = Math.max(0, cooldown - 1);
-  }), () => Settings.backBone)
-
-function render() {
-    if (cooldown > 0) {
-        let a = new Text('').setScale(3).setShadow(true).setAlign('CENTER');
-      a.setString("&3Pull!");
-      a.draw((Renderer.screen.getWidth()) / 2, (Renderer.screen.getHeight()) / 2 - 20);
-    } 
-    return;
-}
-
-registerWhen(register("renderOverlay", render), () => Settings.backBone && getPhase() === 7)
 
 
 
