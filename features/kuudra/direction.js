@@ -26,7 +26,7 @@ registerWhen(register("step", () => {
     const kuudra = cubes.find((cube) => cube.getWidth().toFixed(1) == 15.3 && cube.getEntity().func_110143_aJ() <= 100_000);
     if (kuudra !== undefined) {
         currentHP = kuudra.getEntity().func_110143_aJ();
-        HPDisplay = [`${formatHealth(currentHP.toFixed(2))}§7/§a100k §c❤`, kuudra.getX(), kuudra.getY(), kuudra.getZ()];
+        HPDisplay = [`${formatHealth(currentHP)}§7/§a100k §c❤`, kuudra.getX(), kuudra.getY(), kuudra.getZ()];
     } else {
         currentHP = 100_000;
         HPDisplay = ["100k/100k ❤", 0, 0, 0];
