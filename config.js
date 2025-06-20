@@ -361,6 +361,15 @@ customSupplyMessage = "";
   placeholder: '0',
 })
 pearlAmount = "";
+//Kuudra/Others
+@TextProperty({
+  name: "Auto gfs pearl",
+  description: "Automatically refills to the set amount when the number of pearls falls below the specified threshold.",
+  category: 'Kuudra',
+  subcategory: 'Others',
+  placeholder: '0',
+})
+autoPearl = "";
 
 // Rend
 
